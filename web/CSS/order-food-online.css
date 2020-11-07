@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montez&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Snowburst+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500&display=swap");
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Spartan", sans-serif;
+  font-weight: 400 !important;
+  background: #f3f3f3;
+}
+
+.row {
+  margin: 0;
+}
+
+div,
+p {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none !important;
+  color: black;
+}
+
+.header-container {
+  background-color: #cb202d;
+  padding: 10px 0;
+  height: 3 rem;
+}
+
+.header-wrapper {
+  max-width: 1160px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 1160px;
+  padding: 0 10px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+header .header-wrapper h3 {
+  font-family: "Snowburst One", cursive;
+  font-size: 2rem;
+}
+header .header-wrapper h3 a {
+  color: white;
+}
+
+.text-gray {
+  color: #828282;
+  font-weight: 300;
+}
+
+section .header h1 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+section .options {
+  position: relative;
+  background: white;
+  box-shadow: none;
+  margin: 1rem 0;
+  padding: 1em;
+  border-radius: 0.28rem;
+  border: 1px solid #e7e7e7;
+}
+section .divider {
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0.8rem 0;
+}
+section .filters-tab {
+  margin-top: 1rem;
+}
+section .filters-tab div {
+  font-weight: 500;
+}
+section .filters-tab a,
+section .filters-tab span {
+  font-weight: 400;
+}
+section .filters-tab a:hover,
+section .filters-tab span:hover {
+  color: black;
+}
+section .filters-tab .content-container {
+  padding: 1rem 0 0;
+}
+section .filters-tab .content-container .content .filters-container .search-filters {
+  padding: 0.3rem 0;
+  font-size: 0.8rem;
+}
+section .filters-tab .content-container .content .filters-container .search-filters .checkbox {
+  position: relative;
+  display: flex;
+  min-height: 17px;
+  font-size: 0.8rem;
+  line-height: 17px;
+}
+section .filters-tab .content-container .content .filters-container .search-filters .checkbox:hover {
+  color: #cb202d;
+}
+section .filters-tab .content-container .content .filters-container .search-filters .checkbox .c-box {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 4px;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border: 1px solid #9c9c9c;
+  position: relative;
+  transition: all 0.4s ease 0s;
+}
+section .filters-tab .content-container .content .filters-container .search-filters .checkbox .c-box:checked::after {
+  position: absolute;
+  bottom: 18%;
+  left: 32%;
+  width: 5px;
+  height: 10px;
+  content: "";
+  border-right: 3px solid #dc3545;
+  border-bottom: 3px solid #dc3545;
+  border-top: 0;
+  border-left: 0;
+  transform: rotate(48deg);
+}
+section .filters-tab .content-container .content .filters-container .search-filters .checkbox span {
+  position: relative;
+  display: block;
+  padding-left: 1rem;
+  outline: 0;
+  font-size: 1em;
+}
+section .filters-tab .content-container .content .filters-container .search-filters.cuisine {
+  font-weight: 400;
+  padding: 0;
+  font-size: 0.7rem;
+}
+section .searchbar {
+  position: relative;
+  top: auto;
+  z-index: auto;
+  background: #fff;
+  box-shadow: none;
+  margin-bottom: 2rem;
+  padding: 1em;
+  border-radius: 0.28rem;
+  border: 1px solid #e7e7e7;
+}
+section .searchbar .input {
+  position: relative;
+  font-weight: 400;
+  display: inline-flex;
+  color: #828282;
+  width: 100%;
+}
+section .searchbar .input .arrow-icon,
+section .searchbar .input .search-icon {
+  top: 27%;
+  left: 5px;
+  opacity: 50%;
+  position: absolute;
+}
+section .searchbar .input .address-input,
+section .searchbar .input .food-input {
+  font-size: 0.7rem;
+  width: 100%;
+  margin: 0;
+  flex: 1 0 auto;
+  outline: 0 !important;
+  text-align: left;
+  line-height: 1.2em;
+  padding: 0.5rem 0;
+  padding-left: 2rem;
+  background: white;
+  border: 1px solid #e7e7e7;
+  border-radius: 4px 0 0 4px !important;
+}
+section .searchbar .input .icon {
+  opacity: 50%;
+}
+section .searchbar .input .detect-location {
+  border: none;
+  outline: none !important;
+  border-radius: 0 4px 4px 0;
+}
+section .searchbar .header {
+  color: #828282;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+section .results-container {
+  width: 100%;
+}
+section .results-container a {
+  color: #cb202d;
+}
+section .results-container a:hover {
+  color: #cb202d;
+}
+section .results-container .cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+@media (min-width: 992px) {
+  section .results-container .cards .col-lg-6 {
+    flex: 0 0 49%;
+  }
+}
+section .results-container .cards .card {
+  margin-bottom: 1rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 0.25rem;
+}
+section .results-container .cards .card:first-child {
+  margin-right: 1rem;
+}
+section .results-container .cards .card .content {
+  padding: 1em;
+  background: none;
+  box-shadow: none;
+  font-size: 1em;
+}
+section .results-container .cards .card .content div {
+  font-size: 0.7rem;
+}
+section .results-container .cards .card .content .img-container {
+  background-image: url("../images/ezgif.com-webp-to-png.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 2px;
+  background-size: cover;
+  background-position: 50%;
+  border-radius: 4px;
+}
+section .results-container .cards .card .content .details {
+  display: flex;
+  flex-direction: column;
+}
+section .results-container .cards .card .content .details .shop-name {
+  color: #cb202d;
+}
+section .results-container .cards .card .content .rating {
+  display: flex;
+  align-items: center;
+}
+section .results-container .cards .card .content .rating .stars {
+  display: flex;
+}
+section .results-container .cards .card .content .rating .rating-value {
+  margin-left: 0.5rem;
+  margin-top: 0.3rem;
+}
+section .results-container .cards .card .content .desc {
+  padding-top: 0.5rem;
+}
+section .results-container .cards .card .btn-container {
+  border-radius: 0 0 0.25rem 0.25rem;
+  border-top: 1px solid #dcdcdc;
+}
+section .results-container .cards .card .btn-container .search-btn {
+  border: none;
+  outline: 0 !important;
+  font-size: 0.8rem;
+  color: #099e44;
+  float: right;
+  background: #e6f5ec;
+}
+section .results-container .cards .card .btn-container .search-btn:hover {
+  background: #099e44;
+  color: #ffffff;
+}
+section .results-container .cards .card .btn-container .search-btn:hover .icon .right-angle {
+  fill: #ffffff;
+}
+section .results-container .cards .card .btn-container .search-btn .icon .right-angle {
+  fill: #099e44;
+}

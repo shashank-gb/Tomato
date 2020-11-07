@@ -1,0 +1,613 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montez&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Snowburst+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500&display=swap");
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-weight: 400 !important;
+}
+
+.row {
+  margin: 0;
+}
+
+div,
+p {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none !important;
+  color: black;
+}
+
+.header-container {
+  background-color: #fff;
+  padding: 10px 0;
+  height: 3 rem;
+}
+
+.header-wrapper {
+  max-width: 1160px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.fixed-content {
+  position: fixed;
+  overflow-y: hidden;
+}
+
+header {
+  box-shadow: #e8e8e8 0px -0.5px 0px inset;
+}
+header .header-wrapper h3 {
+  font-family: "Snowburst One", cursive;
+  font-size: 2rem;
+}
+header .header-wrapper h3 a {
+  color: #cb202d;
+  font-weight: 700;
+}
+
+.root {
+  position: relative;
+  max-width: 110rem;
+  max-height: initial;
+  margin: 1rem auto 0;
+}
+
+.wrapper {
+  max-width: 1160px;
+  padding: 0 10px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.gallery-container {
+  display: flex;
+  width: 100%;
+  height: 24rem;
+  margin-top: 1rem;
+}
+.gallery-container .main-img {
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+  min-width: 62%;
+  max-width: 100%;
+  width: 62%;
+  margin: 0;
+  overflow: hidden;
+}
+.gallery-container .main-img img {
+  width: 100%;
+  transition: transform 0.4s ease-in-out 0s, filter 0.4s ease 0s;
+}
+.gallery-container .main-img img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+.gallery-container .extra-images {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-left: 0.2rem;
+}
+.gallery-container .extra-images .img-container {
+  min-width: 62.4%;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  margin: 0 0 0.2rem;
+}
+.gallery-container .extra-images .img-container img {
+  width: 100%;
+  transition: transform 0.4s ease-in-out 0s, filter 0.4s ease 0s;
+}
+.gallery-container .extra-images .img-container img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+.gallery-container .extra-images .more .more-text {
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  top: 5rem;
+  color: white;
+}
+.gallery-container .extra-images .more img {
+  transform: none !important;
+  filter: brightness(0.6) !important;
+}
+.gallery-container .extra-images .add-img {
+  background-image: url(../images/side-img-bg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.gallery-container .extra-images .add-img .cam-container {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50px, -25px);
+}
+.gallery-container .extra-images .add-img .cam-container .cam-logo {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  background-color: rgba(79, 79, 79, 0.6);
+  border-radius: 50%;
+}
+
+.body-container {
+  margin-top: 1.5rem;
+}
+
+.hotel-details-container {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 3;
+  background: white;
+  align-self: flex-start;
+}
+.hotel-details-container .hotel-details {
+  padding-top: 1rem;
+}
+.hotel-details-container .hotel-details .heading {
+  color: #1c1c1c;
+  margin: 0;
+  line-height: 1.2;
+  font-weight: 500;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+.hotel-details-container .hotel-details .details {
+  margin-top: 0.3rem;
+}
+.hotel-details-container .hotel-details .details .type-v {
+  color: #50b547;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.hotel-details-container .hotel-details .details .type-nv {
+  color: #ed6b5a;
+  font-weight: 500;
+  font-size: 1rem;
+  display: none;
+}
+.hotel-details-container .hotel-details .details .address {
+  color: #9c9c9c;
+  font-size: 1rem;
+}
+.hotel-details-container .hotel-details .timing {
+  margin-top: 0.3rem;
+}
+.hotel-details-container .hotel-details .timing .status {
+  color: #f4a266;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.hotel-details-container .hotel-details .timing .time {
+  color: #1c1c1c;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.hotel-details-container .hotel-details .timing .time::before {
+  content: "-";
+  margin: 0 0.6rem;
+}
+.hotel-details-container .options {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 190px;
+  align-self: flex-start;
+  margin-top: 1.5rem;
+  background-color: white;
+  transform: translateZ(0);
+  transition: transform 0.2s ease-in-out 0s;
+}
+.hotel-details-container .options .opt-list {
+  width: -webkit-max-content;
+  width: max-content;
+  min-width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  overflow-x: auto;
+}
+.hotel-details-container .options .opt-list:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+.hotel-details-container .options .opt-list:last-child {
+  margin-right: 0;
+  padding-right: 0;
+}
+.hotel-details-container .options .opt-list .opt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 100%;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+.hotel-details-container .options .opt-list .opt .tab {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0.3rem 1rem;
+  border: 1px solid transparent;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  color: dimgray;
+}
+.hotel-details-container .options .opt-list .opt .tab:first-child {
+  margin-left: 1rem;
+  padding-left: 0.8rem;
+}
+.hotel-details-container .options .opt-list .opt .tab .tab-link {
+  text-decoration: none;
+  font-weight: 400;
+  color: dimgray;
+}
+.hotel-details-container .options .opt-list .opt .h-rule {
+  height: 0.1rem;
+  border-color: transparent;
+  border-radius: 0.7rem;
+  align-self: center;
+  background-color: #f57082;
+  transform: none;
+  width: 100%;
+  margin: 0;
+  will-change: transform;
+  transition: transform 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+  z-index: 1;
+}
+.hotel-details-container .options .opt-list .opt .h-rule:first-child {
+  align-self: flex-start;
+  width: 100%;
+}
+.hotel-details-container .options .opt-list .border-bottom {
+  width: calc(100% - 2px);
+  height: 0;
+  border-top: 2px solid #cfcfcf;
+  border-bottom: none !important;
+  bottom: 1px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+
+.row .options {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 225px;
+  flex-shrink: 0;
+  background: white;
+  box-shadow: none;
+  padding: 1em;
+  border-radius: 0.28rem;
+  border: 1px solid #e7e7e7;
+}
+
+.divider {
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0.8rem 0;
+}
+
+.filters-tab {
+  margin-top: 1rem;
+}
+.filters-tab div {
+  font-weight: 500;
+}
+.filters-tab a,
+.filters-tab span {
+  font-weight: 400;
+}
+.filters-tab a:hover,
+.filters-tab span:hover {
+  color: black;
+}
+.filters-tab .content-container {
+  padding: 1rem 0 0;
+}
+.filters-tab .content-container .content .filters-container .search-filters {
+  padding: 0.3rem 0;
+  font-size: 0.8rem;
+}
+.filters-tab .content-container .content .filters-container .search-filters .checkbox {
+  position: relative;
+  display: flex;
+  min-height: 17px;
+  font-size: 0.8rem;
+  line-height: 17px;
+}
+.filters-tab .content-container .content .filters-container .search-filters .checkbox:hover {
+  color: #cb202d;
+}
+.filters-tab .content-container .content .filters-container .search-filters .checkbox .c-box {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 4px;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border: 1px solid #9c9c9c;
+  position: relative;
+  transition: all 0.4s ease 0s;
+}
+.filters-tab .content-container .content .filters-container .search-filters .checkbox .c-box:checked::after {
+  position: absolute;
+  bottom: 18%;
+  left: 32%;
+  width: 5px;
+  height: 10px;
+  content: "";
+  border-right: 3px solid #dc3545;
+  border-bottom: 3px solid #dc3545;
+  border-top: 0;
+  border-left: 0;
+  transform: rotate(48deg);
+}
+.filters-tab .content-container .content .filters-container .search-filters .checkbox span {
+  position: relative;
+  display: block;
+  padding-left: 1rem;
+  outline: 0;
+  font-size: 1em;
+}
+.filters-tab .content-container .content .filters-container .search-filters.cuisine {
+  font-weight: 400;
+  padding: 0;
+  font-size: 0.7rem;
+}
+
+.food-list-container {
+  padding-left: 1.5rem;
+  flex: 1 1 0;
+  min-width: 50%;
+  border-left: 1px solid #e8e8e8;
+}
+.food-list-container .heading {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+.food-list-container .location {
+  display: flex;
+  width: 100%;
+  background-color: #2781e7;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  border: none;
+  height: 2.1rem;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+}
+.food-list-container .location .location-inner {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  color: white;
+  width: 80%;
+  white-space: nowrap;
+}
+.food-list-container .location .location-inner i {
+  margin-right: 1rem;
+}
+.food-list-container .location .location-inner i svg {
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+.food-list-container .location .location-inner .place {
+  margin-left: 0.3rem;
+  font-weight: 400;
+  overflow: hidden;
+}
+.food-list-container .location .change {
+  font-size: 0.7rem;
+  cursor: pointer;
+  color: white;
+  font-weight: 400;
+  -webkit-user-select: none;
+          user-select: none;
+}
+
+.foodlist-outer {
+  margin-bottom: 1.5rem;
+}
+.foodlist-outer .foodlist-inner {
+  display: flex;
+}
+.foodlist-outer .foodlist-inner .img-container {
+  position: relative;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+.foodlist-outer .foodlist-inner .img-container .img-wrapper {
+  border-radius: 8px;
+  position: relative;
+  max-width: 100%;
+  width: 8rem;
+  height: 8rem;
+}
+.foodlist-outer .foodlist-inner .img-container .img-wrapper .img-div {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  background: linear-gradient(to right, #f8f8f8 0%, white 10%, #f8f8f8 40%, #f8f8f8 100%) no-repeat #f8f8f8;
+  opacity: 0;
+  transition: opacity 0.25s ease-out 0s;
+  will-change: opacity;
+  border-radius: inherit;
+}
+.foodlist-outer .foodlist-inner .img-container .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: none;
+  opacity: 1;
+  border-radius: inherit;
+  transition: opacity 0.25s ease 0s, transform 0.25s ease 0s;
+}
+.foodlist-outer .foodlist-inner .food-details-container {
+  width: 100%;
+}
+.foodlist-outer .foodlist-inner .food-details-container .food-details-inner {
+  display: flex;
+  justify-content: space-between;
+}
+.foodlist-outer .foodlist-inner .food-details-container .food-details-inner .food-details-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 75%;
+}
+.foodlist-outer .foodlist-inner .food-details-container .food-details-inner .food-details-wrapper .heading {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #1c1c1c;
+  margin: 0;
+}
+.foodlist-outer .foodlist-inner .food-details-container .food-details-inner .food-details-wrapper .stars {
+  margin: 0.3rem 0;
+  display: flex;
+  align-items: center;
+}
+.foodlist-outer .foodlist-inner .food-details-container .food-details-inner .food-details-wrapper .cost {
+  margin: 0.3rem 0;
+}
+.foodlist-outer .foodlist-inner .food-details-container .food-details-inner .food-details-wrapper .cost span {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+.foodlist-outer .foodlist-inner .food-details-container .food-details-inner .order-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.foodlist-outer .foodlist-inner .food-details-container .food-details-inner .order-btn-container .order-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.2rem;
+  height: 2rem;
+  border: 1px solid #b5b5b5;
+  border-radius: 6.5px;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-user-select: none;
+          user-select: none;
+  background: white;
+}
+.foodlist-outer .foodlist-inner .food-details-container .food-details-inner .order-btn-container .order-btn .positive, .foodlist-outer .foodlist-inner .food-details-container .food-details-inner .order-btn-container .order-btn .negative {
+  background: white;
+  border: none !important;
+  outline: none !important;
+  color: #ED5A6B;
+  font-weight: 500;
+  margin: 0.2rem 0 0;
+}
+.foodlist-outer .foodlist-inner .food-details-container .food-details-inner .order-btn-container .order-btn .negative {
+  margin: 0;
+}
+.foodlist-outer .foodlist-inner .food-details-container .food-details-inner .order-btn-container .order-btn .add.txt {
+  background: white;
+}
+.foodlist-outer .foodlist-inner .food-details-container .food-details-inner .order-btn-container .order-btn .add {
+  border: none;
+  outline: none !important;
+  height: 2rem;
+  padding: 0.5rem;
+  background: #f7ebec;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1c1c1c;
+  margin: 0 0.2rem;
+}
+.foodlist-outer .foodlist-inner .food-details-container .food-details-inner .order-btn-container .order-btn i {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.foodlist-outer .foodlist-inner .food-details-container .food-details-inner .order-btn-container .order-btn i svg {
+  display: inline-block;
+  line-height: 1;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+}
+.foodlist-outer .foodlist-inner .food-details-container .description {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #4f4f4f;
+  max-width: 75%;
+  overflow: break-word;
+}
+
+.tot-amt-calculator {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  /*max-width: 1160px;*/
+  background: white;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  box-shadow: rgba(125, 125, 125, 0.2) 0px 2px 8px;
+}
+.tot-amt-calculator .tot-amt-container {
+  margin-left: auto;
+}
+.tot-amt-calculator .tot-amt-container .amt-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tot-amt-calculator .tot-amt-container .amt-btn-container .subtotal {
+  font-weight: 500;
+}
+.tot-amt-calculator .tot-amt-container .amt-btn-container .cont-btn {
+  padding: 0.5rem 2rem;
+}
+
+@media (min-width: 769px) {
+  .hotel-details-container .options {
+    width: calc(100% + 1rem);
+  }
+}
