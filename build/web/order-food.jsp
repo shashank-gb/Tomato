@@ -1,6 +1,5 @@
 <%@page import="Model.shops"%>
 <%@page import="java.util.ArrayList"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -283,42 +282,10 @@
 <script>
     
     function callAjax(){
-//        alert($(event.target).parent().siblings().find('.shop-name').text());
-//        $.ajax({
-//            type: 'GET',
-//            url: 'hotel',
-//            data: {
-//                resName: $(event.target).parent().siblings().find('.shop-name').text()
-//            },
-//            success: function(response){
-//                window.location.href = "hotel?resName="+$(event.target).parent().siblings().find('.shop-name').text();
-//            },
-//            error: function(res){
-//                alert(res);
-//            }
-//        });
+
         window.location.href = "hotel?resName="+$(event.target).parent().siblings().find('.shop-name').text();
     }
     
-    $(document).ready(function(){
-        
-//        $('.search-btn').each(function(){
-//            $(this).click(function(){
-//                $.ajax({
-//                    type: 'GET',
-//                    url: 'hotel',
-//                    async: false,
-//                    data: {
-//                        resName: $(this).parent().siblings().find('.shop-name').text(),
-//                    },
-//                    error: function(res){
-//                        alert(res);
-//                    }
-//                });
-//            });
-//        });
-        
-    });
 </script>
 <script src="scripts/orderFood.js"></script>
 <script>
