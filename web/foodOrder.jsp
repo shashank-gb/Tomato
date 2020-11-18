@@ -1,3 +1,4 @@
+<%@page import="Model.fetchFoodList"%>
 <%@page import="Model.foods"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -65,7 +66,7 @@
                     </section>
                     <section class="timing">
                         <span class="status">status</span>
-                        <span class="time">?am - ?pm</span>
+                        <span class="time">? am - ? pm</span>
                     </section>
                 </section>
                 <article class="options">
@@ -161,9 +162,10 @@
                             </div>
                            
                             <% 
-                                ArrayList<foods> foodList = (ArrayList)request.getAttribute("foodList");
+                                fetchFoodList fetchFL = new fetchFoodList(session);
+                                ArrayList<foods> foodList = fetchFL.getAllFoods(request.getParameter("resName"));
                                 for(foods food: foodList){
-                                    System.out.println(food.getFoodName());
+//                                    System.out.println(request.getSession().getAttribute("number"));
                             %>
                             <div class="foodlist-outer">
                                 <div class="foodlist-inner">
@@ -179,7 +181,7 @@
                                     <div class="food-details-container">
                                         <div class="food-details-inner">
                                             <div class="food-details-wrapper">
-                                                <h4 class="heading food-name"><%= food.getFoodName() %></h4>
+                                                <h4 class="heading food-name"><%=food.getFoodName()%></h4>
                                                 <div class="stars">
                                                     <img src="assets/SVG/Star.svg" alt="">
                                                     <img src="assets/SVG/Star.svg" alt="">
@@ -188,7 +190,7 @@
                                                     <img src="assets/SVG/Star-gray.svg" alt="">
                                                 </div>
                                                 <div class="cost">
-                                                    <span>$<%= food.getFoodCost() %></span>
+                                                    <span>$<%=food.getFoodCost()%></span>
                                                 </div>
                                             </div>
                                             <div class="order-btn-container">
@@ -246,7 +248,7 @@
                                 </div>
                             </div-->
                             <%
-                                }
+                            }    
                                 
                             %> 
                             <section class="tot-amt-calculator ">
@@ -281,19 +283,6 @@
         }
         
     });
-    
-    function increment(){
-        
-        var quantity;
-        quantity = $(this).find('.qty').value;
-        console.log(quantity);
-//        console.log(parseInt(quantity)+1);
-        
-    }
-    
-    function decrement(){
-        
-    }
    
 </script>
 

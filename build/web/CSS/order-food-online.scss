@@ -31,8 +31,8 @@ a {
     color: rgb(0, 0, 0);
 }
 
-.header-container {
-    background-color: #cb202d;
+/*.header-container {
+    background-color: #fff;
     padding: 10px 0;
     height: 3 rem;
 }
@@ -41,7 +41,7 @@ a {
     max-width: 1160px;
     padding: 0 10px;
     margin: 0 auto;
-}
+}*/
 
 .wrapper {
     max-width: 1160px;
@@ -50,18 +50,89 @@ a {
     box-sizing: border-box;
 }
 
-header {
+/*header {
+    box-shadow: rgb(232, 232, 232) 0px -0.5px 0px inset;
     .header-wrapper {
         h3 {
             a {
-                color: rgb(255, 255, 255);
+                color: #cb202d;
+                font-weight: 700;
             }
             font-family: "Snowburst One",
-            cursive;
+                cursive;
             font-size: 2rem;
         }
+        ul{
+            li{
+                &:first-child{
+                    margin-right: 1rem;
+                }
+                a{
+                    font-size: 1rem;
+                    color: #cb202d;
+                }
+            }
+        }
     }
-}
+    
+    #after-login {
+        .login-status-container {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            .login-img {
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 50%;
+                background: url('../images/default.webp');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                margin: 0 .25rem;
+                .user-profile{
+                    width: 100%;
+                    margin: auto auto;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .drop-down-icon{
+            margin-left: .6rem;
+        }
+        .user-options {
+            position: absolute;
+            display: none;
+            right: 20px;
+            top: 2rem;
+            background: rgb(255, 255, 255);
+            box-shadow: rgba(28, 28, 28, 0.15) 0px 2px 8px;
+            border-radius: 8px;
+            overflow: hidden;
+            transform: translateY(25px);
+            transition: transform 0.25s ease 0s, opacity 0.25s ease 0s;
+            .opt {
+                color: rgb(28, 28, 28);
+                display: flex;
+                cursor: pointer;
+                justify-content: space-between;
+            }
+
+            .opt-inner {
+                font-size: .9rem;
+                width: 100%;
+                padding: .6rem 1rem .4rem .8rem;
+                background: rgb(255, 255, 255);
+                color: rgb(28, 28, 28);
+                text-align: left;
+                &:hover {
+                    color: rgb(28, 28, 28);
+                    background-color: rgb(232, 232, 232);
+                }
+            }
+        }
+
+    }
+}*/
 
 .text-gray {
     color: rgb(130, 130, 130);

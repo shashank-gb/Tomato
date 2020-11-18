@@ -1,5 +1,6 @@
 <%@page import="Model.shops"%>
 <%@page import="java.util.ArrayList"%>
+<%@page import="Model.registerModel"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,16 +15,19 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="CSS/modal.css">
+    <link rel="stylesheet" href="CSS/navBar.css">
     <link rel="stylesheet" href="CSS/order-food-online.css">
 </head>
 
 <body>
     <div class="root">
-        <header class="header-container">
-            <div class="header-wrapper">
-                <h3 class="text-uppercase"><a href="index.jsp">Tomato</a></h3>
-            </div>
-        </header>
+        <%@include file="assets/JSP/login.jsp" %>
+        <%@include file="assets/JSP/signup.jsp" %>
+        <%
+            session.setAttribute("jspName", "Shops");
+        %>
+        <%@include file="assets/JSP/navBar.jsp" %>
         <div class="wrapper" style="height: 4rem;"></div>
         <section>
             <div id="main-frame" class="wrapper">
@@ -96,7 +100,7 @@
                                         <div class="filters-container ">
                                             <a href=" ">
                                                 <div class="search-filters cuisine ">
-                                                    North Indian
+                                                    Vegetarian
                                                     <span class="float-right text-gray">
                                                     ?
                                                     </span>
@@ -108,7 +112,7 @@
                                         <div class="filters-container ">
                                             <a href=" ">
                                                 <div class="search-filters cuisine ">
-                                                    South Indian
+                                                    Non Vegetarian
                                                     <span class="float-right text-gray">
                                                     ?
                                                     </span>
@@ -116,7 +120,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="content">
+                                    <!--div class="content">
                                         <div class="filters-container ">
                                             <a href=" ">
                                                 <div class="search-filters cuisine ">
@@ -163,7 +167,7 @@
                                                 </div>
                                             </a>
                                         </div>
-                                    </div>
+                                    </div-->
                                 </div>
                             </div>
                         </div>
@@ -224,7 +228,7 @@
                                                     </div>
                                                     <div class="col-sm-7 col-md-8 float-right">
                                                         <div class="details row">
-                                                            <h3 class="shop-name"><%= shop.getRes_name() %></h3>
+                                                            <h3 id="<%= shop.getRes_id() %>" class="shop-name"><%= shop.getRes_name() %></h3>
                                                             <div class="rating">
                                                                 <div class="stars">
                                                                     <div class="star">
@@ -255,14 +259,14 @@
                                                 </div>
                                             </div>
                                             <div class="btn-container">
-                                                <button type="submit" onclick="callAjax()" name="<%= shop.getRes_id() %>" class="search-btn px-3 py-2">
+                                                <a  href="hotel.jsp?resName=<%=shop.getRes_name()%>&resId=<%= shop.getRes_id() %>" name="<%= shop.getRes_id() %>" class="search-btn px-3 py-2">
                                                     Order Online 
                                                     <i class="icon">
                                                         <svg class="right-angle" xmlns="http://www.w3.org/2000/svg" width="7.41" height="10" viewBox="0 0 7.41 12" fill="#fff">
                                                             <path id="ic_keyboard_arrow_right_24px" d="M8.59,16.34l4.58-4.59L8.59,7.16,10,5.75l6,6-6,6Z" transform="translate(-8.59 -5.75)"/>
                                                         </svg>                                                      
                                                     </i>
-                                                </button>
+                                                </a>
                                             </div>
                                         </div>
                                     <%}%> 
@@ -279,28 +283,14 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<script>
-    
-    function callAjax(){
-
-        window.location.href = "hotel?resName="+$(event.target).parent().siblings().find('.shop-name').text();
-    }
-    
-</script>
+<%@include file="assets/JSP/loginSignupChecker.jsp"%>
+<script src="scripts/index.js"></script>
 <script src="scripts/orderFood.js"></script>
-<script>
-    
-    $(".address-input").on("keyup", function() {
-        var text = $(this).val().toLowerCase();
 
-        $(".payment-opt").parentsUntil('.cards').hide();
-
-        $(".payment-opt").filter(function () {
-            return $(this).text().toLowerCase().indexOf(text) > -1;
-        }).parentsUntil('cards').show();
-    });
+<script src="scripts/jquery.validate.js"></script>
+<script src="scripts/validation.js"></script>
     
-</script>
+
 </body>
 
 </html>

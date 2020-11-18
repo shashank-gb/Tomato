@@ -27,13 +27,25 @@
   
         st = con.createStatement();
 
-        String query = "select l_id, city from location group by city;";
+        String query = "select l_id, city from location;";
         rs = st.executeQuery(query);
        
         while(rs.next()){
             System.out.println(rs.getString("city"));
             %>
-            <option value="<%= rs.getInt("l_id")%>"><%=rs.getString("city")%></option>
+            <option value="<%= rs.getInt("l_id")%>"
+                    
+                    <%
+                        if(request.getParameter("location")!=null){
+                            if(rs.getInt("l_id") == Integer.parseInt(request.getParameter("location"))){
+                                out.print("selected");
+                            }
+                        }
+                    %>
+                    
+                    ><%=rs.getString("city")+" - "+rs.getInt("l_id")%>
+            
+            </option>
             <%
         }
     }catch(Exception e){
@@ -45,7 +57,7 @@
        <option value="0">Select Hotel</option>
        <%
            try{
-               Class.forName("com.mysql.jdbc.Driver");
+               Class.forName("com.mysql.jdbc.Driver").newInstance();
                con = DriverManager.getConnection(url+dbname, username , password);
 
                st = con.createStatement();
@@ -55,17 +67,7 @@
                
                while(rs.next()){
         %>
-                  <option value="<%= rs.getInt("rid")%>"
-                          
-                    <%
-                        if(request.getParameter("location")!=null){
-                            if(rs.getInt("l_id") == Integer.parseInt(request.getParameter("location"))){
-                                out.print("selected");
-                            }
-                        }
-                    %>
-                          
-                  ><%=rs.getString("rname")%></option>
+                  <option value="<%= rs.getInt("rid")%>"><%=rs.getString("rname")%></option>
         <%   
                }
            }catch(Exception e){

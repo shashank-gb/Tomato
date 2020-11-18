@@ -11,11 +11,20 @@ package Model;
  */
 public class foods {
     
+    int foodId;
     String foodName;
     Double foodCost;
     String foodDescription;
     String foodPreference;
 
+    public int getFoodId() {
+        return foodId;
+    }
+
+    public void setFoodId(int foodId) {
+        this.foodId = foodId;
+    }
+    
     public String getFoodName() {
         return foodName;
     }

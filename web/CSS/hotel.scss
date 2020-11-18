@@ -53,10 +53,10 @@ header {
             a {
                 color: #cb202d;
                 font-weight: 700;
+                font-size: 2rem;
             }
             font-family: "Snowburst One",
             cursive;
-            font-size: 2rem;
         }
     }
 }
@@ -202,7 +202,7 @@ header {
             }
             .address {
                 color: rgb(156, 156, 156);
-                font-size: 1rem;
+                font-size: .8rem;
             }
         }
         .timing {
@@ -459,6 +459,7 @@ header {
     margin-bottom: 1.5rem;
     .foodlist-inner {
         display: flex;
+        position: relative;
         .img-container {
             position: relative;
             margin-right: 1.5rem;
@@ -490,6 +491,35 @@ header {
                     border-radius: inherit;
                     transition: opacity 0.25s ease 0s, transform 0.25s ease 0s;
                 }
+            }
+        }
+        .logo-container{
+            width: .8rem;
+            height: .8rem;
+            position: absolute;
+            display: flex;
+            background-color: rgb(255, 255, 255);
+            border-radius: .15rem;
+            left: 110px;
+            top: 5px;
+            justify-content: center;
+            align-items: center;
+            .logo{
+                width: .4rem;
+                height: 0.4rem;
+                border-radius: 50%;
+            }
+        }
+        .logo-container[type="Veg"]{
+            border: .5px solid rgb(80,181,71);
+            .logo{
+                background: rgb(80,181,71);
+            }
+        }
+        .logo-container[type="Non-veg"]{
+            border: .5px solid rgb(237,90,107);
+            .logo{
+                background: rgb(237,90,107);
             }
         }
         .food-details-container {
@@ -550,6 +580,7 @@ header {
                             margin: 0;
                         }
                         .add.txt{
+                            padding-right: 0;
                             background: rgb(255, 255, 255);
                         }
                         .add {

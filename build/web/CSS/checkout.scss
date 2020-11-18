@@ -1,0 +1,411 @@
+.wrapper,
+.header-wrapper {
+    max-width: 60rem;
+}
+
+p {
+    font-size: .8rem;
+    line-height: 1.5;
+    margin: 0;
+    color: rgb(54, 54, 54);
+}
+
+.cost {
+    font-size: .8rem;
+    &::before {
+        content: "₹";
+    }
+}
+
+.text-gray {
+    color: rgb(156, 156, 156);
+}
+
+.wrapper {
+    .heading {
+        margin-top: 1.5rem;
+    }
+    .body-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .left-container {
+            position: relative;
+            max-width: 66.667%;
+            width: 100%;
+            .card {
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 16px;
+                .car-body {
+                    padding: 1.5rem 2rem 2.5rem;
+                }
+                .desc {
+                    line-height: 1.5;
+                }
+                .btn-container {
+                    margin-top: 2rem;
+                    display: flex;
+                    justify-content: space-between;
+                    .btn {
+                        width: 48%;
+                        box-shadow: none !important;
+                        min-height: 44px;
+                    }
+                    .login-btn {
+                        background-color: rgb(255, 255, 255) !important;
+                        color: #dc3545;
+                    }
+                }
+            }
+            .address-container {
+                h5 {
+                    font-weight: 700;
+                }
+                .selected-address{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0 .8rem;
+                    align-items: center;
+                    .select-inner{
+                        display: flex;
+                        .address-detail{
+                            display: flex;
+                            padding-left: .6rem;
+                            width: 80%;
+                            .address{
+                                font-weight: 600;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                line-height: 2;
+                            }
+                        }
+                    }
+                    .change{
+                        cursor: pointer;
+                        font-weight: 500;
+                        color: #ED5A6B;
+                    }
+                }
+
+                .add-address-outer {
+                    padding: 1rem 1rem 0;
+                    .add-address {
+                        margin-top: .8rem;
+                        cursor: pointer;
+                        border: 1px dashed rgb(253, 201, 209);
+                        border-radius: .6rem;
+                        padding: .8rem;
+                        display: flex;
+                        align-items: center;
+                        &:hover {
+                            background-color: rgb(248, 248, 248);
+                        }
+                        p {
+                            color: rgb(237, 90, 107);
+                            line-height: 1.8;
+                            font-size: 1rem;
+                            margin-top: .2rem;
+                            margin-left: 1.2rem;
+                            font-weight: 900;
+                        }
+                    }
+                    .address-list-container{
+                        max-height: 20rem;
+                        overflow: auto;
+                        position: relative;
+                        .list-inner{
+                            &:first-child{
+                                padding-top: 0;
+                            }
+                            display: flex;
+                            padding: 1rem 0;
+                            border-bottom: 1px solid rgb(232,232,232);
+                            align-items: flex-start;
+                            .tick-container{
+                                padding-right: .4rem;
+                            }
+                            .address-detail{
+                                padding-left: .4rem;
+                                width: 100%;
+                                p.address{
+                                    line-height: 1.8;
+                                    margin: 0 0 1rem;
+                                    overflow-wrap: break-word;
+                                    color: rgb(72,72,72);
+                                }
+                                .btn-container{
+                                    margin-top: 1rem;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    .deliver-btn, .edit-btn{
+                                        margin-right: 1rem;
+                                        min-height: 32px;
+                                        background-color: rgb(237,90,107);
+                                        width: 20%;
+                                        color: rgb(255, 255, 255);
+                                        font-size: .8rem;
+                                        border-radius: .6rem;
+                                        padding: 0;
+                                        border: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .payment-details {
+                h5 {
+                    margin-bottom: 1rem;
+                    font-weight: 700;
+                }
+                .payment-options {
+                    background: rgb(255, 255, 255);
+                    cursor: pointer;
+                    .atm-card,
+                    .cash {
+                        border-top: 1px solid rgb(240, 240, 240);
+                        padding: 1rem;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    .cash {
+                        padding: 1rem 1rem 0;
+                    }
+                    .cash-opt {
+                        padding: 1rem 1.5rem 0;
+                        .cash-opt-inner {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
+        .right-container {
+            max-width: 33.333%;
+            width: 100%;
+            position: relative;
+            padding-left: 25px;
+            .inner-container {
+                border: 1px solid rgb(248, 248, 248);
+                border-radius: .8rem;
+                overflow: hidden;
+                .hotel-details {
+                    padding: 1rem;
+                    background-color: rgb(248, 248, 248);
+                    border-bottom: .1rem solid rgb(232, 232, 232);
+                    .ord-from {
+                        margin: 0 0 .6rem;
+                        letter-spacing: .2rem;
+                        font-weight: 500;
+                        font-size: .6rem;
+                    }
+                    .hotel-name {
+                        font-size: 1.2rem;
+                        font-weight: 900;
+                    }
+                    .address {
+                        font-size: .7rem;
+                        line-height: 2.5;
+                    }
+                }
+                .food-details {
+                    padding: 1rem;
+                    background-color: rgb(255, 255, 255);
+                    border-bottom: .1rem solid rgb(232, 232, 232);
+                    .single-food {
+                        display: flex;
+                        margin-bottom: 1rem;
+                        position: relative;
+                        margin-left: .5rem;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        .outer {
+                            position: absolute;
+                            left: -20px;
+                            top: 2px;
+                            width: .8rem;
+                            height: .8rem;
+                            background: transparent;
+                            border-radius: .15rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            .inner {
+                                width: .3rem;
+                                height: .3rem;
+                                border-radius: 50%;
+                            }
+                        }
+                        .outer[type="Veg"]{
+                            border: .5px solid rgb(80, 181, 71);
+                            .inner{
+                                background-color: rgb(80, 181, 71);
+                            }
+                        }
+                        .outer[type="Non-veg"]{
+                            border: .5px solid rgb(237, 90, 107);
+                            .inner{
+                                background-color: rgb(237, 90, 107);
+                            }
+                        }
+                        .food {
+                            width: 100%;
+                            display: flex;
+                            margin-bottom: .5rem;
+                            justify-content: space-between;
+                            .food-inner {
+                                .food-name {
+                                    line-height: 1.5;
+                                    font-weight: 500;
+                                    font-size: .8rem;
+                                    padding-right: .5rem;
+                                    font-weight: bold;
+                                }
+                                .cost {
+                                    font-size: .7rem;
+                                    margin-right: .5rem;
+                                }
+                            }
+                            .order-btn-container {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                .order-btn {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    width: 4.5rem;
+                                    height: 1.8rem;
+                                    border: 1px solid #b5b5b5;
+                                    border-radius: 6.5px;
+                                    overflow: hidden;
+                                    cursor: pointer;
+                                    user-select: none;
+                                    background: white;
+                                    .positive,
+                                    .negative {
+                                        background: white;
+                                        border: none !important;
+                                        outline: none !important;
+                                        color: #ED5A6B;
+                                        font-weight: 500;
+                                        margin: 0.2rem 0 0;
+                                        padding-right: 0;
+                                        padding-left: 0;
+                                    }
+                                    .negative {
+                                        margin: 0;
+                                    }
+                                    .add {
+                                        border: none;
+                                        outline: none !important;
+                                        height: 2rem;
+                                        padding: 0.5rem;
+                                        background: #f7ebec;
+                                        font-size: 0.8rem;
+                                        font-weight: 600;
+                                        color: #1c1c1c;
+                                        margin: 0 0.5rem;
+                                        &.txt {
+                                            background-color: white;
+                                            padding-left: 0;
+                                            padding-right: 0;
+                                            margin: 0 .3rem;
+                                        }
+                                    }
+                                }
+                                .sub-amt {
+                                    font-weight: bolder;
+                                    margin-top: .4rem;
+                                    &:before {
+                                        content: "₹";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .amt-details {
+                    padding: 1rem 1rem 0;
+                    background: rgb(254, 252, 249);
+                    .sub-tot {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        p {
+                            font-weight: 600;
+                            color: rgb(79, 79, 79);
+                        }
+                        .cost {
+                            font-size: .8rem;
+                            margin-right: .3rem;
+                        }
+                    }
+                    .charges {
+                        margin-top: 1rem;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        p {
+                            color: rgb(130, 130, 130);
+                        }
+                        .cost {
+                            font-size: .6rem;
+                            color: rgb(130, 130, 130);
+                            margin-right: 0.3rem;
+                        }
+                    }
+                    hr {
+                        margin-top: 1rem;
+                        border-width: 0.5px 0px 0px;
+                        border-right-style: initial;
+                        border-bottom-style: initial;
+                        border-left-style: initial;
+                        border-right-color: initial;
+                        border-bottom-color: initial;
+                        border-left-color: initial;
+                        border-image: initial;
+                        border-top-style: solid;
+                        border-top-color: rgb(232, 232, 232);
+                        height: 0;
+                    }
+                    .grand-total {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        font-weight: 900;
+                        .cost {
+                            font-weight: 600;
+                            font-weight: 400;
+                            margin-right: .3rem;
+                        }
+                    }
+                }
+            }
+            .warning {
+                margin: 1rem;
+                line-height: 1.5;
+                font-size: .8rem;
+                color: rgb(237, 90, 107);
+            }
+            .place-order {
+                position: sticky;
+                bottom: 0;
+                margin-top: 1rem;
+                text-align: center;
+                padding-bottom: 1.5rem;
+                .order-btn {
+                    height: 2.8rem;
+                    width: 100%;
+                    color: rgb(248, 248, 248);
+                    background-color: rgb(237, 90, 107);
+                    box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 18px;
+                }
+            }
+        }
+    }
+}

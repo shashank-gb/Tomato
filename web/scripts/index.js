@@ -84,41 +84,61 @@ $(document).ready(function() {
         });
     });
     
-    //    Increment Decrement Counter
+    //    Increment Decrement Quantity Button
     
-        $(document).ready(function() {
-        if ($('.qty').val() === 0 || $('.qty').val() === '') {
-            $('.negative').hide();
-            $('.txt').show();
-            $('.qty').hide();
-        }
-        $("input").click(function() {
-            let clickAction = $(this).val();
-            let displayElement = $(this).parent().find("input.qty");
-            let currentval = +$(displayElement).val();
+    if ($('.qty').val() == 0) {
+        $('.negative').hide();
+        $('.txt').show();
+        $('.qty.add').hide();
+    }
+    $("input").click(function() {
+        let clickAction = $(this).val();
+        let displayElement = $(this).parent().find("input.qty");
+        let currentval = +$(displayElement).val();
 
-            if (clickAction === "+") {
-                $(this).parent().find("input.qty").show();
-                $(this).parent().find(".negative").show();
-                $(this).parent().find(".txt").hide();
-                currentval++;
-            } else if (clickAction === "-") {
-                if (currentval > 1) {
-                    currentval--;
-                } else {
-                    currentval--;
-                    console.log(currentval);
-                    $(this).parent().find("input.qty").hide();
-                    $(this).parent().find("input.negative").hide();
-                    $(this).parent().find(".txt").show();
-                }
+        if (clickAction === "+") {
+            $(this).parent().find("input.qty").show();
+            $(this).parent().find(".negative").show();
+            $(this).parent().find(".txt").hide();
+            currentval++;
+        } else if (clickAction === "-") {
+            if (currentval > 1) {
+                currentval--;
+            } else {
+                currentval--;
+                console.log(currentval);
+                $(this).parent().find("input.qty").hide();
+                $(this).parent().find("input.negative").hide();
+                $(this).parent().find(".txt").show();
             }
-            $(displayElement).val(currentval);
-        });
+        }
+        $(displayElement).val(currentval);
     });
         
 
-
+    //  Amount Calculator in foodOrder.jsp 
+    
+    $('.tot-amt-calculator').hide();
+        
+        var totCost = parseInt(0);
+        $('.positive').click(function(){
+            $('.tot-amt-calculator').show();
+            var perCost = $(this).parent().parent().siblings('.food-details-wrapper').find('span').text();
+            
+            totCost = totCost + parseInt(perCost);
+            $('.sub-amt').text(totCost);
+        });
+        
+        $('.negative').click(function(){
+            var perCost = $(this).parent().parent().siblings('.food-details-wrapper').find('span').text();
+            
+            totCost = totCost - parseInt(perCost);
+            $('.sub-amt').text(totCost);
+            
+            if($('.sub-amt').text() === "0"){
+                $('.tot-amt-calculator').hide();
+            }
+        });
 
     
 });

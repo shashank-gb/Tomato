@@ -91,6 +91,7 @@ public class registerModel {
     public Status Login(String email, String pw){
         Status status = null;
         String uname = null;
+        int uId;
         Blob profile = null;
         
         try{
@@ -99,18 +100,19 @@ public class registerModel {
             
             st = con.createStatement();
             
-            rs = st.executeQuery("SELECT username, password, user_image FROM user_register WHERE email = '"+email+"' and password = '"+pw+"';");
+            rs = st.executeQuery("SELECT uid,username, password, user_image FROM user_register WHERE email = '"+email+"' and password = '"+pw+"';");
             
             if(rs.next()){
                 
                 uname = rs.getString("username");
-                
+                uId = rs.getInt("uid");
                 profile = rs.getBlob("user_image");
                 byte profileArr[] = profile.getBytes(1, (int)profile.length());
                 FileOutputStream fout = new FileOutputStream("D:/projects/Java/Tomato/web/images/profile.webp");
                 fout.write(profileArr);
                 
                 System.out.println(uname);
+                se.setAttribute("userId", uId);
                 se.setAttribute("uname", uname);
                 status  = status.success;
                 

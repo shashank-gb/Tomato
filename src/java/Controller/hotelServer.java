@@ -1,8 +1,14 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Controller;
 
 import Model.fetchFoodList;
 import Model.foods;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,34 +18,57 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-
+/**
+ *
+ * @author SHASHANKgb
+ */
 @WebServlet(name = "hotel", urlPatterns = {"/hotel"})
 public class hotelServer extends HttpServlet {
-    
+
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        response.setContentType("text/html;charset=UTF-8");
         
     }
 
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    /**
+     * Handles the HTTP <code>GET</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            try  {
+        response.setContentType("text/html;charset=UTF-8");
+        
+        HttpSession session = request.getSession();
+        fetchFoodList fetchFL = new fetchFoodList(session);
+        
+        System.out.println(request.getParameter("resName"));
+        System.out.println(request.getRequestURI());
+        try {
             
-            System.out.println(request.getParameter("resName"));
             if(request.getParameter("resName") != null){
                 
-                HttpSession session = request.getSession();
-                fetchFoodList fetchFL = new fetchFoodList(session);
-
                 ArrayList<foods> foodList = fetchFL.getAllFoods(request.getParameter("resName"));
-
-                request.setAttribute("foodList", foodList);
+                int number = 10;
+                request.getSession().setAttribute("number", number);
                 System.out.println(foodList+" in server");
-                
-                RequestDispatcher rd = request.getRequestDispatcher("foodOrder.jsp");
-                rd.forward(request, response);
+
+                request.getRequestDispatcher("foodOrder.jsp").forward(request, response);
                 
             }
             
@@ -48,16 +77,28 @@ public class hotelServer extends HttpServlet {
         }
     }
 
-    
+    /**
+     * Handles the HTTP <code>POST</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+        processRequest(request, response);
     }
-    
+
+    /**
+     * Returns a short description of the servlet.
+     *
+     * @return a String containing servlet description
+     */
     @Override
     public String getServletInfo() {
         return "Short description";
-    }
+    }// </editor-fold>
 
 }

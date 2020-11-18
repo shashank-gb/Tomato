@@ -5,13 +5,8 @@
  */
 package Controller;
 
-import Model.fetchShopList;
 import Model.registerModel;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -42,9 +37,7 @@ public class registerServer extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session = request.getSession();
         registerModel reg = new registerModel(session);
-        
         try {
-            
             if (request.getParameter("submit") != null) {
                 String name = request.getParameter("uname");
                 String email = request.getParameter("email");
@@ -57,45 +50,48 @@ public class registerServer extends HttpServlet {
                     
                     switch (regStatus) {
                         case existed:
-                            request.setAttribute("regStatus", registerModel.Status.existed);
+                            session.setAttribute("regStatus", registerModel.Status.existed);
                             break;
                         case success:
-                            request.setAttribute("regStatus", registerModel.Status.success);
+                            session.setAttribute("regStatus", registerModel.Status.success);
                             break;
                         case failure:
-                            request.setAttribute("regStatus", registerModel.Status.failure);
+                            session.setAttribute("regStatus", registerModel.Status.failure);
                             break;
                         default:
                             break;
                     }
                 
-                    request.getRequestDispatcher("index.jsp").forward(request, response);
+//                    request.getRequestDispatcher("index.jsp").forward(request, response);
                 
             }else if(request.getParameter("signin") != null){
                 
                 String email = request.getParameter("email");
                 String password = request.getParameter("password");
-                
-                
                 loginStatus = reg.Login(email, password);
                 
                 if(loginStatus == registerModel.Status.success){
                     
-                    request.setAttribute("loginStatus", registerModel.Status.success);
+                    session.setAttribute("loginStatus", registerModel.Status.success);
                     
                 }else{
                     
-                    request.setAttribute("loginStatus", registerModel.Status.failure);
+                    session.setAttribute("loginStatus", registerModel.Status.failure);
                     
                 }
-                request.getRequestDispatcher("index.jsp").forward(request, response);
+//                request.getRequestDispatcher("index.jsp").forward(request, response);
                 
             }else if (request.getParameter("signout") != null){
                 
                 session.invalidate();
-                request.getRequestDispatcher("index.jsp").forward(request, response);
+                
                 
             }
+            System.out.println(session.getAttribute("jspName")+" in register");
+            request.getRequestDispatcher(session.getAttribute("jspName").toString()).forward(request, response);
+//            request.getRequestDispatcher("").forward(request, response);
+//            response.sendRedirect(url);
+            
         } catch (Exception e) {
             System.out.print("Something wrong");
         }

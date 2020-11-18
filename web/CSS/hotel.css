@@ -51,11 +51,11 @@ header {
 }
 header .header-wrapper h3 {
   font-family: "Snowburst One", cursive;
-  font-size: 2rem;
 }
 header .header-wrapper h3 a {
   color: #cb202d;
   font-weight: 700;
+  font-size: 2rem;
 }
 
 .root {
@@ -200,7 +200,7 @@ header .header-wrapper h3 a {
 }
 .hotel-details-container .hotel-details .details .address {
   color: #9c9c9c;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 .hotel-details-container .hotel-details .timing {
   margin-top: 0.3rem;
@@ -450,6 +450,7 @@ header .header-wrapper h3 a {
 }
 .foodlist-outer .foodlist-inner {
   display: flex;
+  position: relative;
 }
 .foodlist-outer .foodlist-inner .img-container {
   position: relative;
@@ -483,6 +484,35 @@ header .header-wrapper h3 a {
   opacity: 1;
   border-radius: inherit;
   transition: opacity 0.25s ease 0s, transform 0.25s ease 0s;
+}
+.foodlist-outer .foodlist-inner .logo-container {
+  width: 0.8rem;
+  height: 0.8rem;
+  position: absolute;
+  display: flex;
+  background-color: white;
+  border-radius: 0.15rem;
+  left: 110px;
+  top: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.foodlist-outer .foodlist-inner .logo-container .logo {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+}
+.foodlist-outer .foodlist-inner .logo-container[type=Veg] {
+  border: 0.5px solid #50b547;
+}
+.foodlist-outer .foodlist-inner .logo-container[type=Veg] .logo {
+  background: #50b547;
+}
+.foodlist-outer .foodlist-inner .logo-container[type=Non-veg] {
+  border: 0.5px solid #ed5a6b;
+}
+.foodlist-outer .foodlist-inner .logo-container[type=Non-veg] .logo {
+  background: #ed5a6b;
 }
 .foodlist-outer .foodlist-inner .food-details-container {
   width: 100%;
@@ -547,6 +577,7 @@ header .header-wrapper h3 a {
   margin: 0;
 }
 .foodlist-outer .foodlist-inner .food-details-container .food-details-inner .order-btn-container .order-btn .add.txt {
+  padding-right: 0;
   background: white;
 }
 .foodlist-outer .foodlist-inner .food-details-container .food-details-inner .order-btn-container .order-btn .add {

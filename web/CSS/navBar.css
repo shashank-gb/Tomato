@@ -1,0 +1,84 @@
+.header-container {
+  background-color: #fff;
+  padding: 10px 0;
+  height: 3 rem;
+}
+
+.header-wrapper {
+  max-width: 1160px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+header {
+  box-shadow: #e8e8e8 0px -0.5px 0px inset;
+}
+header .header-wrapper h3 {
+  font-family: "Snowburst One", cursive;
+  font-size: 2rem;
+}
+header .header-wrapper h3 a {
+  color: #cb202d;
+  font-weight: 700;
+}
+header .header-wrapper ul li:first-child {
+  margin-right: 1rem;
+}
+header .header-wrapper ul li a {
+  font-size: 1rem;
+  color: #cb202d;
+}
+header #after-login .login-status-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+header #after-login .login-status-container .login-img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: url("../images/default.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin: 0 0.25rem;
+}
+header #after-login .login-status-container .login-img .user-profile {
+  width: 100%;
+  margin: auto auto;
+  border-radius: 50%;
+}
+header #after-login .drop-down-icon {
+  margin-left: 0.6rem;
+}
+header #after-login .user-options {
+  position: absolute;
+  display: none;
+  right: 20px;
+  top: 2rem;
+  background: white;
+  box-shadow: rgba(28, 28, 28, 0.15) 0px 2px 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 99;
+  transform: translateY(25px);
+  transition: transform 0.25s ease 0s, opacity 0.25s ease 0s;
+}
+header #after-login .user-options .opt {
+  color: #1c1c1c;
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+}
+header #after-login .user-options .opt-inner {
+  font-size: 0.9rem;
+  width: 100%;
+  padding: 0.6rem 1rem 0.4rem 0.8rem;
+  background: white;
+  color: #1c1c1c;
+  text-align: left;
+}
+header #after-login .user-options .opt-inner:hover {
+  color: #1c1c1c;
+  background-color: #e8e8e8;
+}
