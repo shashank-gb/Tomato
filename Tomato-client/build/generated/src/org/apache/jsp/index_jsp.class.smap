@@ -1,0 +1,64 @@
+SMAP
+index_jsp.java
+JSP
+*S JSP
+*F
++ 0 index.jsp
+index.jsp
++ 1 login.jsp
+assets/JSP/login.jsp
++ 2 signup.jsp
+assets/JSP/signup.jsp
++ 3 navBarForHome.jsp
+assets/JSP/navBarForHome.jsp
++ 4 connection.jsp
+assets/JSP/connection.jsp
++ 5 loginSignupChecker.jsp
+assets/JSP/loginSignupChecker.jsp
+*L
+1,29:66
+30,4:96
+33,2:100
+35,2:103
+36,3:105
+5#1,62:108
+38#0,3:170
+5#2,96:173
+40#0,5:269
+5#3,32:274
+37:306,3
+38,19:309
+44#0,20:328
+5#4,28:348
+32:376
+63#0,4:377
+67,10:382
+76,2:392
+78:394,3
+79,3:397
+81,5:400
+85,18:405
+5#4,28:423
+32:451
+102#0,3:452
+104,8:455
+111,2:463
+113:465,6
+114,2:471
+115,5:473
+119,149:478
+5#5,16:627
+21:643,3
+22,6:646
+28:652,3
+29,6:655
+35:661,3
+36:664
+37:665,3
+38,8:668
+46:676,3
+47,5:679
+52:684,3
+53,3:687
+267#0,15:690
+*E

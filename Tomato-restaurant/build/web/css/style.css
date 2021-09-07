@@ -1,0 +1,229 @@
+.navbar{
+  background-color: #CB202D;
+  font-family: "Snowburst One",cursive;
+  padding-left: 3rem;
+  color: white;
+}
+#modal-p{
+  width: 100%;
+}
+.pw1{
+   padding: 0.2rem 0.25rem;
+  border-radius: 6px;
+  outline: 0;
+  border: 1px solid #CCC;
+  color: #1c1c1c;  
+}
+#name,#email1,#CITY,#vehicle,#pw1{
+  padding: 0.2rem 0.25rem;
+  border-radius: 6px;
+  outline: 0;
+  border: 1px solid #CCC;
+  color: #1c1c1c;
+}
+#CITY,#vehicle{
+  padding:0 0.2rem;
+}
+ .modal-body div.error{
+  position: absolute;
+  top: 2.6rem;
+  font-size: 13px;
+  font-weight: 400;
+  left: -62px;
+}
+.nav-links{
+  padding-right: 7rem;
+}
+div.error{
+  color: red;
+  text-align: left;
+  margin-left: 4.2rem;
+}
+input.error,select.error{
+  border-color: red;
+}
+body{
+  overflow-x:hidden;
+  margin:0;
+}
+.earn{
+  width:100%;
+  height:100%;
+  background-color: #CB202D;
+  padding-bottom: 10px;
+  color: #fff;
+  padding-top: 200px;
+  padding-left: 20px;
+
+}
+div.error{
+  color:red;
+}
+a{
+  color: #fff;
+}
+h3{
+  color: #fff;
+  font-size: 2rem;
+}
+.row{
+  text-align: center;
+}
+.txt{
+  text-align: right;
+}
+.container-sm{
+  padding-top:20px;
+  padding-bottom: 20px;
+  margin-bottom: 100px;
+  width:350px;
+  /* height:370px; */
+  margin-top: -230px;
+  margin-left: 75px;
+  background-color: #fff;
+  text-align: center;
+  align-items: center;
+  border:#777D81 solid 1px;
+  border-color: #777D81;
+  /* box-shadow: 4px 2px; */
+}
+.goes{
+  margin-top: 20px;
+}
+
+.drdown{
+  width:187px;
+  height:31px;
+}
+.Vehicle-select{
+  margin-top: 17px;
+}
+.check{
+    float: left;
+}
+footer{
+  background-color: #000;
+  color: #fff;
+  padding-bottom:40px;
+}
+a{
+  color: #fff;
+}
+/* Login */
+
+
+.modal-header {
+  border: none;
+}
+
+.modal {
+  color: #4f4f4f;
+}
+.modal h5 {
+  font-size: 1.5rem;
+}
+.modal .mh-wrapper {
+  width: calc(100% + 0.5rem);
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal .close {
+  padding: 0;
+  margin: 0;
+}
+.modal .close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+.modal .mb-wrapper {
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.modal .phno,
+.modal .fullname {
+  width: 100%;
+  outline: 0;
+}
+#go{
+  margin-bottom:1.5rem;
+}
+.modal .phno-inner,
+.modal .fullname-inner {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 1rem;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  margin: 0;
+}
+
+.modal .phone-input {
+  padding: 0.6rem;
+  border-radius: 6px;
+  outline: 0;
+  border: none;
+  width: 100%;
+  color: #1c1c1c;
+}
+.modal .otp-btn {
+  width: 100%;
+  min-height: 30px;
+  margin-top: 1rem;
+  font-weight: 300;
+  color: #ebebeb;
+  display: inline-flex;
+  align-items: stretch;
+}
+.modal button:focus {
+  outline: none;
+}
+.modal .btn {
+  width: 100%;
+  font-weight: 300;
+  padding: 0.5rem 0;
+}
+.modal .hr-text {
+  position: relative;
+  width: 100%;
+  display: flex;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+.modal .hr-text .divider {
+  width: 100%;
+  border-image: initial;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0px;
+}
+.modal .hr-text span {
+  position: absolute;
+  padding: 0rem 0.7rem 0rem 0.7rem;
+  background: white;
+  font-size: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: dimgray;
+}
+
+.sigcs{
+  padding-right:75px;
+  font-size: 1.5rem;
+}
+label.error{
+  color: red;
+  margin-bottom:0;
+}

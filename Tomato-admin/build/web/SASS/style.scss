@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Snowburst+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500&display=swap');
+body {
+    overflow: hidden;
+    font-family: 'spartan', sans-serif;
+    background-color: rgb(232,232,232);
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 35rem;
+}
+
+
+h2 {
+    text-align: center;
+}
+
+.form-container {
+    max-width: 25rem;
+    margin: 3rem auto;
+}
+
+.form-control{
+    background: transparent !important;
+    border: 1px solid #aaa;
+}
+
+.form-control:focus,
+.login-btn:focus,
+.login-btn:active {
+    border: 1px solid #dc3545;
+    outline: none;
+    box-shadow: none !important;
+}
+
+.sticky-footer {
+    position: fixed;
+    text-align: center;
+    color: rgb(207, 207, 207);
+    width: 100%;
+    background-color: rgb(52, 58, 64);
+    bottom: 0;
+    padding: .5rem 0;
+    font-size: .8rem;
+}
+
+.email-container,
+.password-container {
+    background: transparent;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.login-btn {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+div,
+p {
+    font-size: .8rem;
+}
+
+.copyright {
+    margin-top: 1rem;
+}
+
+.err-msg {
+    height: 13px;
+    color: #dc3545;
+    font-size: 11px;
+    line-height: 13px;
+    margin-top: 2px;
+}
+
+.form-group{
+    position: relative;
+}
+
+div.error{
+    position: absolute;
+    top: 4rem;
+    font-weight: 400;
+    font-size: .7rem;
+}
+
+.error-container{
+    position: absolute;
+    left: 5rem;
+    bottom: 2.5rem;
+}
+
+.error{
+    border-color: #dc3545;
+    color: #dc3545;
+}

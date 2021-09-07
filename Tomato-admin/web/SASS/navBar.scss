@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Snowburst+One&display=swap');
+
+header {
+    background: #dc3545;
+    padding: .5rem 8rem !important;
+    color: rgb(255, 255, 255);
+    margin-bottom: 1rem;
+    h1 {
+        font-family: 'Snowburst One', cursive;
+        a{
+            color: rgb(255,255,255) !important;
+        }
+    }
+}
+
+.profile {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    .profile-photo {
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: wheat;
+        border-radius: 50%;
+    }
+    .admin {
+        font-size: 1rem;
+        margin-left: .5rem;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+}
+
+.options-container{
+    position: absolute;
+    border-radius: 8px;
+    top: 4rem;
+    background-color: rgb(255,255,255);
+    right: 7rem;
+    overflow: hidden;
+    .opt{
+        cursor: pointer;
+        padding: 0.4rem 1rem;
+        color: black;
+        &:hover{
+            background-color: rgb(232,232,232);
+        }
+    }
+}

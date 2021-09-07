@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Snowburst+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500&display=swap");
+/* line 4, D:/projects/Java/Tomato-admin/web/SASS/dashboard.scss */
+body {
+  font-family: 'Spartan';
+}
+
+/* line 8, D:/projects/Java/Tomato-admin/web/SASS/dashboard.scss */
+header {
+  padding: .5rem 17rem !important;
+}
+
+/* line 12, D:/projects/Java/Tomato-admin/web/SASS/dashboard.scss */
+.options-container {
+  right: 15rem;
+  z-index: 9;
+}
+
+/* line 17, D:/projects/Java/Tomato-admin/web/SASS/dashboard.scss */
+nav a {
+  color: #464646 !important;
+}
+
+/* line 21, D:/projects/Java/Tomato-admin/web/SASS/dashboard.scss */
+.top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+}
+
+/* line 29, D:/projects/Java/Tomato-admin/web/SASS/dashboard.scss */
+.wrapper {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+/* line 33, D:/projects/Java/Tomato-admin/web/SASS/dashboard.scss */
+.wrapper .heading {
+  padding: .5rem 0;
+  margin-bottom: 1rem;
+}
+
+/* line 39, D:/projects/Java/Tomato-admin/web/SASS/dashboard.scss */
+button {
+  outline: 0 !important;
+}
+
+/* line 43, D:/projects/Java/Tomato-admin/web/SASS/dashboard.scss */
+.modal-dialog {
+  max-width: 650px;
+}
+
+/* line 47, D:/projects/Java/Tomato-admin/web/SASS/dashboard.scss */
+.modal-content {
+  padding: 1rem 3rem;
+}
+
+/* line 51, D:/projects/Java/Tomato-admin/web/SASS/dashboard.scss */
+.modal-body, .modal-header {
+  margin: 1rem;
+  border-bottom: 0;
+  padding: 0;
+}
+
+/* line 57, D:/projects/Java/Tomato-admin/web/SASS/dashboard.scss */
+.modal-footer {
+  border-top: 0;
+}
+
+/* line 61, D:/projects/Java/Tomato-admin/web/SASS/dashboard.scss */
+.table-sm td, .table-sm th {
+  padding: 0.8rem 0rem;
+  font-weight: 500;
+}
+
+/* line 66, D:/projects/Java/Tomato-admin/web/SASS/dashboard.scss */
+td {
+  position: relative;
+  font-weight: 400;
+}
+
+/* line 69, D:/projects/Java/Tomato-admin/web/SASS/dashboard.scss */
+td span {
+  position: absolute;
+  left: -100px;
+  right: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 76, D:/projects/Java/Tomato-admin/web/SASS/dashboard.scss */
+td span:before {
+  content: ":";
+  margin-right: .8rem;
+}
+
+/* line 85, D:/projects/Java/Tomato-admin/web/SASS/dashboard.scss */
+.card {
+  overflow: hidden;
+  margin-right: -1px;
+}
+
+/* line 88, D:/projects/Java/Tomato-admin/web/SASS/dashboard.scss */
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 16px;
+}
+
+/* line 92, D:/projects/Java/Tomato-admin/web/SASS/dashboard.scss */
+.card .card-body .details {
+  padding: 0.6rem;
+  cursor: pointer;
+}
+
+/* line 95, D:/projects/Java/Tomato-admin/web/SASS/dashboard.scss */
+.card .card-body .details th, .card .card-body .details td {
+  padding: 0.5rem .5rem;
+  font-size: .8rem;
+  margin-bottom: 0.4rem;
+}
+
+/* line 101, D:/projects/Java/Tomato-admin/web/SASS/dashboard.scss */
+.card .card-body .btn-container {
+  display: flex;
+}
+
+/* line 103, D:/projects/Java/Tomato-admin/web/SASS/dashboard.scss */
+.card .card-body .btn-container .btn {
+  overflow: hidden;
+  box-shadow: none !important;
+  width: 100%;
+  border-radius: 0 !important;
+}
+
+/* line 112, D:/projects/Java/Tomato-admin/web/SASS/dashboard.scss */
+.message {
+  display: flex;
+  position: absolute;
+  top: 1.3rem;
+  z-index: 9;
+  height: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: auto;
+  padding: 0.2rem 1rem;
+  background: white;
+  border: 1px solid red;
+  font-size: .8rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 4px 16px;
+}
+
+/*# sourceMappingURL=dashboard.css.map */

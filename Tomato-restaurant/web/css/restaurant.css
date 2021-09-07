@@ -1,0 +1,50 @@
+.navbar{
+  background-color: white;
+  padding-left: 3rem;
+  color: white;
+}
+body{
+    background-color: #efefef;
+}
+.card{
+    margin-top: 1rem;
+    padding: 1.25rem 2rem;
+}
+.my{
+    color: red;
+}
+.nav-link{
+    color: white;
+}
+.nav-links{
+    font-size: 2rem;
+    color: red;
+    font-family: "Snowburst One",cursive;
+}
+ .bodies{
+    background-image:url(../img/side3.jpg);
+    background-size: cover;
+    background-color: grey;
+    height:20rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.goess{
+    font-size: 80px;
+}
+.left{
+     z-index: 0;
+    max-width: 60rem;
+    margin:0 auto;
+    
+}
+.first{
+    position: sticky;
+    top:0;
+    z-index: 10;
+}
+.orby{
+    text-align: right;
+}

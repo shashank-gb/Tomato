@@ -1,0 +1,68 @@
+.navbar{
+  background-color: white;
+  padding-left: 3rem;
+  color: white;
+}
+.nav-link{
+    color: white;
+}
+.addfood{
+    margin-top: 1rem;
+}
+.nav-links{
+    font-size: 2rem;
+    color: red;
+    font-family: "Snowburst One",cursive;
+}
+.foodid{
+    display: flex;
+}
+.foodbody{
+    width:60rem;
+    margin: 0 auto;
+}
+.img-container{
+   width: fit-content;
+   border-radius: 8px;
+   overflow: hidden;
+}
+.card1{
+    padding: 1rem;
+    border: 1px solid #aaa;
+    border-radius: 0.4rem;
+    width:95%;
+    cursor: pointer;
+}
+
+.card-container{
+  margin-top: 1rem;
+  flex-wrap: nowrap;
+  width: 95%;
+}
+
+/*.card1:last-child{
+  margin-left: .8rem;
+}*/
+
+.btnsub{
+  text-align: end;
+}
+.modal-title{
+  margin-left: 43px;
+}
+.svg1{
+    width:15px;
+    height: 15px;
+}
+.food_name{
+     border: 1px solid #cfcfcf;
+  padding: 0.6rem;
+  border-radius: 6px;
+  outline: 0;
+  width: 100%;
+  color: #1c1c1c;
+}
+.modal-content{
+    max-width: 90%;
+    
+}
